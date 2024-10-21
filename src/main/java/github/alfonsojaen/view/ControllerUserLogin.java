@@ -3,6 +3,7 @@ package github.alfonsojaen.view;
 import java.io.IOException;
 
 import github.alfonsojaen.dao.UserManager;
+import github.alfonsojaen.model.User;
 import github.alfonsojaen.singleton.UserSession;
 import github.alfonsojaen.utils.Utils;
 import javafx.fxml.FXML;
@@ -16,12 +17,6 @@ public class ControllerUserLogin {
     @FXML
     private PasswordField tPass;
 
-    /**
-     * Handles the user login process.
-     * Retrieves the entered Gmail and password, validates them,
-     * and logs the user in if the credentials are correct.
-     * Displays appropriate alerts for successful or failed login attempts.
-     */
     @FXML
     private void login() throws IOException {
         String gmail = tGmail.getText().trim();
@@ -31,11 +26,12 @@ public class ControllerUserLogin {
             Utils.ShowAlert("Falta algún campo por introducir");
         } else {
             UserManager userDAO = new UserManager();
-            String nameUser;
-            if ((nameUser = userDAO.checkLogin(gmail, password)) != null) {
-                UserSession.login(gmail, nameUser);
+            User loggedInUser = userDAO.checkLogin(gmail, password);
+
+            if (loggedInUser != null) {
+                UserSession.login(gmail, password);
                 Utils.ShowAlert("Login exitoso, se ha logeado el usuario correctamente.");
-                switchToUserPage();
+                Scenes.setRoot("pantallaAddContact",loggedInUser);
             } else {
                 UserSession.logout();
                 Utils.ShowAlert("No se ha podido logear, inténtelo de nuevo.");
@@ -44,6 +40,7 @@ public class ControllerUserLogin {
     }
     @FXML
     private void switchToUserPage() throws IOException {
-        Scenes.setRoot("secondary");
+        Scenes.setRoot("pantallaRegisterUser", null);
     }
+
 }

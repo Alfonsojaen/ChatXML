@@ -1,5 +1,7 @@
 package github.alfonsojaen;
 
+import github.alfonsojaen.model.User;
+import github.alfonsojaen.view.ControllerAddContact;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,9 +26,16 @@ public class App extends Application {
         stage.setResizable(false);
         stage.show();
     }
-    public static Scene createScene(String fxml, double width, double height) throws IOException {
+    public static Scene createScene(String fxml, double width, double height, User User) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view/" + fxml + ".fxml"));
         Parent root = fxmlLoader.load();
+        if (fxml.equals("pantallaAddContact")) {
+            ControllerAddContact controller = fxmlLoader.getController();
+            if (controller != null) {
+                controller.setUser(User);
+                System.out.println("Usuario conectado: " + User.getGmail());
+            }
+        }
         Scene scene = new Scene(root, width, height);
         return scene;
     }

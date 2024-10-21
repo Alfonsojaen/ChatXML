@@ -2,6 +2,8 @@ package github.alfonsojaen.model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement (name = "user")
 public class User {
@@ -10,8 +12,11 @@ public class User {
     private String gmail;
     private String fullName;
     private int age;
+    private List<String> contacts;
 
-    public User() {}
+    public User() {
+        contacts = new ArrayList<>();
+    }
 
     public User(String username, String password, String gmail, String fullName, int age) {
         this.username = username;
@@ -19,9 +24,17 @@ public class User {
         this.gmail = gmail;
         this.fullName = fullName;
         this.age = age;
+        this.contacts = new ArrayList<>();
     }
 
+    @XmlElement(name = "contact")
+    public List<String> getContacts() {
+        return contacts;
+    }
 
+    public void setContacts(List<String> contacts) {
+        this.contacts = contacts;
+    }
     public String getUsername() {
         return username;
     }
@@ -66,4 +79,15 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void addContact(String contactEmail) {
+        if (!contacts.contains(contactEmail)) {
+            contacts.add(contactEmail);
+        }
+    }
+
+    public void removeContact(String contactEmail) {
+        contacts.remove(contactEmail);
+    }
 }
+

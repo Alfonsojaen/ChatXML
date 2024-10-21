@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<messages>
+    <message>
+        <content>Hola, Usuario Dos!</content>
+        <recipient>user2@gmail.com</recipient>
+        <sender>user1@gmail.com</sender>
+        <timestamp>1729534001802</timestamp>
+    </message>
+    <message>
+        <content>Hola, Usuario Uno! ¿Cómo estás?</content>
+        <recipient>user1@gmail.com</recipient>
+        <sender>user2@gmail.com</sender>
+        <timestamp>1729534001814</timestamp>
+    </message>
+    <message>
+        <content>¡Hola, Usuario Tres! ¿Te gustaría salir hoy?</content>
+        <recipient>user3@gmail.com</recipient>
+        <sender>user1@gmail.com</sender>
+        <timestamp>1729534001818</timestamp>
+    </message>
+</messages>

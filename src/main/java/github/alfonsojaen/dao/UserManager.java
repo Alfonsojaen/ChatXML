@@ -21,9 +21,10 @@ public class UserManager {
         loadUsers();
     }
 
-    public void addUser(User user) {
+    public boolean addUser(User user) {
         wrapperUser.getUsers().add(user);
         saveUsers();
+        return true;
     }
 
     private void saveUsers() {
@@ -55,7 +56,7 @@ public class UserManager {
     public List<User> getUsers() {
         return wrapperUser.getUsers();
     }
-    public String checkLogin(String gmail, String password) {
+    public User checkLogin(String gmail, String password) {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(WrapperUser.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
@@ -65,11 +66,29 @@ public class UserManager {
             for (User user : users) {
 
                 if (user.getGmail() != null && user.getPassword() != null && user.getGmail().equals(gmail) && user.getPassword().equals(password)) {
-                    return user.getFullName();
+                    return user;
                 }
             }
         } catch (JAXBException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+    public void addContactToUser(String userEmail, String contactEmail) {
+        for (User user : wrapperUser.getUsers()) {
+            if (user.getGmail().equals(userEmail)) {
+                user.addContact(contactEmail);
+                saveUsers();
+                return;
+            }
+        }
+        System.out.println("Usuario no encontrado: " + userEmail);
+    }
+    public User findUserByEmail(String email) {
+        for (User user : wrapperUser.getUsers()) {
+            if (user.getGmail().equals(email)) {
+                return user;
+            }
         }
         return null;
     }
