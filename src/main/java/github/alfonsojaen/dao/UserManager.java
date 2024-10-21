@@ -55,4 +55,22 @@ public class UserManager {
     public List<User> getUsers() {
         return wrapperUser.getUsers();
     }
+    public String checkLogin(String gmail, String password) {
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(WrapperUser.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            WrapperUser wrapper = (WrapperUser) unmarshaller.unmarshal(new File(FILE_PATH));
+
+            List<User> users = wrapper.getUsers();
+            for (User user : users) {
+
+                if (user.getGmail() != null && user.getPassword() != null && user.getGmail().equals(gmail) && user.getPassword().equals(password)) {
+                    return user.getFullName();
+                }
+            }
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

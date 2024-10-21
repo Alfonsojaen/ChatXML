@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class User {
     private String username;
     private String password;
-    private String email;
+    private String gmail;
     private String fullName;
     private int age;
 
     public User() {}
 
-    public User(String username, String password, String email, String fullName, int age) {
+    public User(String username, String password, String gmail, String fullName, int age) {
         this.username = username;
         this.password = password;
-        this.email = email;
+        this.gmail = gmail;
         this.fullName = fullName;
         this.age = age;
     }
@@ -40,13 +40,13 @@ public class User {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getGmail() {
+        return gmail;
     }
 
     @XmlElement
-    public void setEmail(String email) {
-        this.email = email;
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
     }
 
     public String getFullName() {

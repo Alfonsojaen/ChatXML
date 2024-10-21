@@ -10,4 +10,6 @@ module github.alfonsojaen {
     exports github.alfonsojaen;
     exports github.alfonsojaen.model;
     opens github.alfonsojaen.wrapper to java.xml.bind;
+    exports github.alfonsojaen.view;
+    opens github.alfonsojaen.view to java.xml.bind, javafx.fxml;
 }

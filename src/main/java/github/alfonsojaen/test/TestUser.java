@@ -8,12 +8,12 @@ public class TestUser {
     public static void main(String[] args) {
         UserManager userManager = new UserManager();
 
-        User newUser = new User("alfonso", "jaen2005", "johndoe@example.com", "John Doe", 30);
+        User newUser = new User("alfonso", "jaen2005", "alfonsojaen@gmail.com", "John Doe", 30);
         userManager.addUser(newUser);
 
         for (User user : userManager.getUsers()) {
             System.out.println("Username: " + user.getUsername());
-            System.out.println("Email: " + user.getEmail());
+            System.out.println("Gmail: " + user.getGmail());
             System.out.println("Full Name: " + user.getFullName());
             System.out.println("Age: " + user.getAge());
             System.out.println("-------------------------");

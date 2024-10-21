@@ -2,22 +2,22 @@
 <users>
     <user>
         <age>30</age>
-        <email>johndoe@example.com</email>
         <fullName>John Doe</fullName>
-        <password>password123</password>
-        <username>johndoe</username>
-    </user>
-    <user>
-        <age>30</age>
-        <email>johndoe@example.com</email>
-        <fullName>John Doe</fullName>
+        <gmail>alfonso2005@example.com</gmail>
         <password>jaen2005</password>
         <username>alfonso</username>
     </user>
     <user>
         <age>30</age>
-        <email>johndoe@example.com</email>
         <fullName>John Doe</fullName>
+        <gmail>alfonsojaen2005@gmail.com</gmail>
+        <password>jaen2005</password>
+        <username>alfonso</username>
+    </user>
+    <user>
+        <age>30</age>
+        <fullName>John Doe</fullName>
+        <gmail>alfonsojaen@gmail.com</gmail>
         <password>jaen2005</password>
         <username>alfonso</username>
     </user>
