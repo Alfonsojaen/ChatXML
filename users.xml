@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <age>30</age>
+        <email>johndoe@example.com</email>
+        <fullName>John Doe</fullName>
+        <password>password123</password>
+        <username>johndoe</username>
+    </user>
+    <user>
+        <age>30</age>
+        <email>johndoe@example.com</email>
+        <fullName>John Doe</fullName>
+        <password>jaen2005</password>
+        <username>alfonso</username>
+    </user>
+    <user>
+        <age>30</age>
+        <email>johndoe@example.com</email>
+        <fullName>John Doe</fullName>
+        <password>jaen2005</password>
+        <username>alfonso</username>
+    </user>
+</users>
