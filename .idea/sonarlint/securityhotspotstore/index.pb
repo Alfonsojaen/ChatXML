@@ -51,3 +51,5 @@ f
 6src/main/java/github/alfonsojaen/test/TestContacs.java,7\1\71849b7e28e70d47e6b6dd77b29e6e3b98f7b98d
 o
 ?src/main/java/github/alfonsojaen/view/ControllerAddContact.java,3\2\32ce93cfd696a74858f3668dc1679c2942b07447
+q
+Asrc/main/java/github/alfonsojaen/view/ControllerConversation.java,2\1\21ec8579a2703f54d8a3235b37452631064e8235

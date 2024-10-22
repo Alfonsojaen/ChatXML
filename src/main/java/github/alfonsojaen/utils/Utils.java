@@ -4,6 +4,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.security.MessageDigest;
 
 public class Utils {
@@ -24,7 +27,13 @@ public class Utils {
         }
         return result;  // Se devuelve el resultado del hash en formato hexadecimal
     }
-
+    public static void saveToFile(String filePath, String content) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write(content);
+        } catch (IOException e) {
+            e.printStackTrace(); // Manejo de errores
+        }
+    }
     public static Alert Alert(String title, String header, String text, Alert.AlertType type) {
         Alert alertDialog = new Alert(type);
         alertDialog.setTitle(title);

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageManager {
-    private static final String FILE_PATH = "messages.xml"; // Ruta del archivo XML
+    private static final String FILE_PATH = "messages.xml";
     private WrapperMessage wrapperMessage;
 
     public MessageManager() {
@@ -21,13 +21,11 @@ public class MessageManager {
         loadMessages();
     }
 
-    // Método para enviar un mensaje
     public void sendMessage(Message message) {
         wrapperMessage.getMessages().add(message);
         saveMessages();
     }
 
-    // Método para guardar mensajes en el archivo XML
     private void saveMessages() {
         try {
             JAXBContext context = JAXBContext.newInstance(WrapperMessage.class);
@@ -39,7 +37,6 @@ public class MessageManager {
         }
     }
 
-    // Método para cargar mensajes desde el archivo XML
     private void loadMessages() {
         File file = new File(FILE_PATH);
         if (file.exists() && file.length() > 0) {
@@ -55,7 +52,6 @@ public class MessageManager {
         }
     }
 
-    // Obtener todos los mensajes
     public List<Message> getMessages() {
         return wrapperMessage.getMessages();
     }

@@ -11,6 +11,8 @@
         <age>30</age>
         <contact>alfonsoj@gmail.com</contact>
         <contact>alfonso2005@example.com</contact>
+        <contact>alfonsojs@gmail.com</contact>
+        <contact>user3@gmail.com</contact>
         <fullName>John Doe</fullName>
         <gmail>alfonsojaen2005@gmail.com</gmail>
         <password>jaen2005</password>
@@ -27,6 +29,7 @@
     </user>
     <user>
         <age>19</age>
+        <contact>alfonsojaen2005@gmail.com</contact>
         <fullName>alfonso</fullName>
         <gmail>alfonsoj@gmail.com</gmail>
         <password>Alfonso2005</password>
@@ -34,6 +37,7 @@
     </user>
     <user>
         <age>12</age>
+        <contact>alfonsojaen2005@gmail.com</contact>
         <fullName>dsda</fullName>
         <gmail>alfonsojs@gmail.com</gmail>
         <password>vxdvxv</password>
@@ -55,6 +59,7 @@
     </user>
     <user>
         <age>28</age>
+        <contact>alfonsojaen2005@gmail.com</contact>
         <fullName>Usuario Tres</fullName>
         <gmail>user3@gmail.com</gmail>
         <password>contraseña3</password>

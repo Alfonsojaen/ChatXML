@@ -1,9 +1,8 @@
 
 }
 java:S1118
-":Add a private constructor to hide the implicit public one.(¯¨©à8ğÙË÷ª2J$00a1397d-06d6-44b1-a6d0-c6b7a2de900c
-R
-java:S1854"5Remove this useless assignment to local variable "p".(¨ûş8‹µå„«2
-C
-java:S1481"&Remove this unused "p" local variable.(¨ûş8µå„«2
-X	java:S125"<This block of commented-out lines of code should be removed.(ã¿¹¿8µå„«2
+":Add a private constructor to hide the implicit public one.(¯¨©à8ğÙË÷ª2J$43959e3e-e891-466c-b781-34d4acbd4efa
+x
+java:S1854"5Remove this useless assignment to local variable "p".(¨ûş8‹µå„«2J$1330e861-34ad-48ff-9f11-f2cb741286b3
+i
+java:S1481"&Remove this unused "p" local variable.(¨ûş8µå„«2J$1ccf0f0d-7212-4e6e-9b27-e65895ee0c09

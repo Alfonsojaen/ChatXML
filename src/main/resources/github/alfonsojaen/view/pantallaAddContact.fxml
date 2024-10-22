@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -13,71 +14,83 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerAddContact">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerAddContact">
     <children>
-        <AnchorPane prefHeight="422.0" prefWidth="159.0" style="-fx-background-color: black;">
-         <children>
-            <Label layoutX="20.0" layoutY="388.0" text="Copyright © 2024" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="14.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../icons/symbolInsta.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="48.0" layoutY="331.0" prefHeight="26.0" prefWidth="89.0" text="alfonsojaen_" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="14.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../icons/githubLogo.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="48.0" layoutY="294.0" prefHeight="26.0" prefWidth="89.0" text="Alfonsojaen" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
-        </AnchorPane>
-        <AnchorPane prefHeight="422.0" prefWidth="493.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+        <AnchorPane prefHeight="600.0" prefWidth="249.0" style="-fx-background-color: black;">
             <children>
-                <Label layoutX="61.0" layoutY="191.0" prefHeight="39.0" prefWidth="126.0" text="Añadir Contacto" textAlignment="JUSTIFY">
+                <Label layoutX="20.0" layoutY="570.0" text="Copyright © 2024" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="14.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../icons/symbolInsta.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="48.0" layoutY="510.0" prefHeight="26.0" prefWidth="89.0" text="alfonsojaen_" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="14.0" layoutY="470.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../icons/githubLogo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="48.0" layoutY="470.0" prefHeight="26.0" prefWidth="89.0" text="Alfonsojaen" textFill="WHITE">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+            <children>
+                <Label layoutX="17.0" layoutY="30.0" prefHeight="39.0" prefWidth="126.0" text="Añadir Contacto" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tEmail" layoutX="62.0" layoutY="238.0" prefHeight="26.0" prefWidth="150.0" text="Gmail" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="274.0">
-               <effect>
-                  <DropShadow />
-               </effect></TextField>
-                <Label alignment="CENTER" layoutX="88.0" layoutY="26.0" prefHeight="39.0" prefWidth="197.0" text="CONTACTOS" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="75.19999999999999">
+                <TextField fx:id="tEmail" layoutX="180.0" layoutY="35.0" prefHeight="26.0" prefWidth="150.0" promptText="Gmail" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="156.8">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </TextField>
+                <Button layoutX="355.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleAddContact" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: black;" text="Añadir" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
-                </Label>
-                <Button layoutX="236.0" layoutY="227.0" mnemonicParsing="false" onAction="#handleAddContact" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: black;" text="Añadir" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
                 </Button>
-                <Separator layoutY="62.0" prefHeight="6.0" prefWidth="361.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.1999999999999886" />
-                <Separator layoutX="3.0" layoutY="361.0" prefHeight="6.0" prefWidth="357.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.1999999999999886" />
-            <ComboBox fx:id="contactList" layoutX="62.0" layoutY="128.0" prefWidth="150.0" />
-            <Button layoutX="236.0" layoutY="126.0" mnemonicParsing="false" onAction="#handleSelectContact" text="Enviar mensaje" />
-            <Label layoutX="61.0" layoutY="88.0" prefHeight="39.0" prefWidth="174.0" text="Seleccionar Contacto" textAlignment="JUSTIFY">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Label>
-            <Separator layoutX="1.0" layoutY="183.0" prefHeight="6.0" prefWidth="483.0" />
+                <Separator layoutX="2.0" layoutY="65.0" prefHeight="6.0" prefWidth="361.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.1999999999999886" />
+
+                <Label layoutX="14.0" layoutY="80.0" prefHeight="39.0" prefWidth="174.0" text="Seleccionar Contacto" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="contactList" layoutX="179.0" layoutY="80.0" prefWidth="150.0" />
+                <Button layoutX="355.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleSelectContact" text="Seleccionar" />
+
+                <Separator layoutX="-1.0" layoutY="120.0" prefHeight="6.0" prefWidth="483.0" />
+
+                <Label layoutX="14.0" layoutY="140.0" prefHeight="39.0" prefWidth="174.0" text="Historial de Chat" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="chatHistory" layoutX="14.0" layoutY="180.0" prefHeight="200.0" prefWidth="480.0" editable="false"/>
+
+                <Label layoutX="14.0" layoutY="390.0" text="Nuevo Mensaje:"/>
+                <TextField fx:id="newMessage" layoutX="14.0" layoutY="410.0" prefWidth="400.0" promptText="Escribe tu mensaje aquí..." />
+                <Button layoutX="420.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Enviar" />
+
+                <Separator layoutX="0.0" layoutY="450.0" prefHeight="6.0" prefWidth="480.0" />
+
+                <Button layoutX="420.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleExportConversation" text="Exportar Conversación" />
             </children>
         </AnchorPane>
     </children>

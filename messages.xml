@@ -18,4 +18,22 @@
         <sender>user1@gmail.com</sender>
         <timestamp>1729534001818</timestamp>
     </message>
+    <message>
+        <content>Hola como estas</content>
+        <recipient>user3@gmail.com</recipient>
+        <sender>alfonsojaen2005@gmail.com</sender>
+        <timestamp>2024-10-22 13:15:54</timestamp>
+    </message>
+    <message>
+        <content>como estas tu</content>
+        <recipient>alfonsojaen2005@gmail.com</recipient>
+        <sender>user3@gmail.com</sender>
+        <timestamp>2024-10-22 13:18:27</timestamp>
+    </message>
+    <message>
+        <content>Que pasa bro</content>
+        <recipient>alfonsoj@gmail.com</recipient>
+        <sender>alfonsojaen2005@gmail.com</sender>
+        <timestamp>2024-10-22 13:22:04</timestamp>
+    </message>
 </messages>
