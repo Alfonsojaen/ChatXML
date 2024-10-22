@@ -9,6 +9,8 @@
     </user>
     <user>
         <age>30</age>
+        <contact>alfonsoj@gmail.com</contact>
+        <contact>alfonso2005@example.com</contact>
         <fullName>John Doe</fullName>
         <gmail>alfonsojaen2005@gmail.com</gmail>
         <password>jaen2005</password>
@@ -16,9 +18,46 @@
     </user>
     <user>
         <age>30</age>
+        <contact>alfonsojaen2005@gmail.com</contact>
+        <contact>alfonsoj@gmail.com</contact>
         <fullName>John Doe</fullName>
         <gmail>alfonsojaen@gmail.com</gmail>
         <password>jaen2005</password>
         <username>alfonso</username>
+    </user>
+    <user>
+        <age>19</age>
+        <fullName>alfonso</fullName>
+        <gmail>alfonsoj@gmail.com</gmail>
+        <password>Alfonso2005</password>
+        <username>aflonsojaen</username>
+    </user>
+    <user>
+        <age>12</age>
+        <fullName>dsda</fullName>
+        <gmail>alfonsojs@gmail.com</gmail>
+        <password>vxdvxv</password>
+        <username>dsvsd</username>
+    </user>
+    <user>
+        <age>25</age>
+        <fullName>Usuario Uno</fullName>
+        <gmail>user1@gmail.com</gmail>
+        <password>contraseña1</password>
+        <username>usuario1</username>
+    </user>
+    <user>
+        <age>30</age>
+        <fullName>Usuario Dos</fullName>
+        <gmail>user2@gmail.com</gmail>
+        <password>contraseña2</password>
+        <username>usuario2</username>
+    </user>
+    <user>
+        <age>28</age>
+        <fullName>Usuario Tres</fullName>
+        <gmail>user3@gmail.com</gmail>
+        <password>contraseña3</password>
+        <username>usuario3</username>
     </user>
 </users>

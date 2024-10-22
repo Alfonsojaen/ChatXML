@@ -9,18 +9,6 @@ h
 8src/main/java/github/alfonsojaen/model/Conversation.java,9\5\957ce69ac03bf9eafbd65adc0f802dd09b96c95c
 N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
-d
-4src/main/java/github/alfonsojaen/dao/MessageDAO.java,1\d\1d9a876e634e3777f326afb50c257150761b015a
-e
-5src/main/java/github/alfonsojaen/dao/WrapperUser.java,8\7\87e31e90e480da414682973c516ba5c8a1e7aacd
-h
-8src/main/java/github/alfonsojaen/dao/WrapperMessage.java,c\1\c111cd2976bba45e27fe19815bcb39ed234db747
-_
-/src/main/java/github/alfonsojaen/test/test.java,9\3\9352caa848ca1a912ed9520d369be95c2e36a5be
-a
-1src/main/java/github/alfonsojaen/dao/UserXML.java,0\e\0e9af39dede952619b02a20788fb1cb1031eca8b
-Z
-*src/main/java/github/alfonsojaen/users.xml,c\5\c57c8894c5877fcf55f8fb0d11e117e00ad97f61
 e
 5src/main/java/github/alfonsojaen/dao/UserManager.java,8\e\8e4a227157a9ae1384e1bc0ee0e0e66443a555df
 Y
@@ -35,8 +23,6 @@ c
 3src/main/java/github/alfonsojaen/test/testUser.java,2\5\25ee88be6c5a1aa71036abd586e32b85b6565025
 c
 3src/main/java/github/alfonsojaen/test/TestUser.java,2\1\21849c20d3c5f8dbdad6a54fc3ed6ea5057db305
-l
-<src/main/java/github/alfonsojaen/view/PrimaryController.java,b\4\b4d9d38e60290c3a232fe119689d029679f159e4
 a
 1src/main/java/github/alfonsojaen/view/scenes.java,5\b\5bdc896c723b0415ae6aae4f64b715c5c2c749ba
 a
@@ -55,3 +41,13 @@ k
 0src/main/java/github/alfonsojaen/Ejecutable.java,0\a\0aaa648cf76fd57249a06ff4913cf47e19db14c3
 h
 8src/main/java/github/alfonsojaen/dao/MessageManager.java,0\0\00aaf4acc36175db2c32f04487c10e5ccc4ca930
+q
+Asrc/main/java/github/alfonsojaen/view/ControllerUserRegister.java,f\f\ff75fe5820cb9dcb5e6e28486c5f547216cce90e
+f
+6src/main/java/github/alfonsojaen/test/TestMessage.java,8\f\8f4ab8a41deaccec042df5bca8f4e3f7802f0b06
+<
+messages.xml,f\a\fa033081c8e99c527b1e25383c453356fdc52d54
+f
+6src/main/java/github/alfonsojaen/test/TestContacs.java,7\1\71849b7e28e70d47e6b6dd77b29e6e3b98f7b98d
+o
+?src/main/java/github/alfonsojaen/view/ControllerAddContact.java,3\2\32ce93cfd696a74858f3668dc1679c2942b07447
