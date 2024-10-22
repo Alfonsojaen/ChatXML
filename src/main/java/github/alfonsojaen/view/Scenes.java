@@ -15,8 +15,8 @@ public class Scenes {
         if (fxml.equals("pantallaRegisterUser")) {
             newScene = App.createScene(fxml, 640, 460, null);
 
-        } else if (fxml.equals("pantallaAddContact")) {
-            newScene = App.createScene(fxml, 640, 460, user);
+        } else if (fxml.equals("pantallaChat")) {
+            newScene = App.createScene(fxml, 700, 700, user);
 
         } else if (fxml.equals("pantallaLoginUser")) {
             newScene = App.createScene(fxml, 640, 460, null);

@@ -14,10 +14,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerAddContact">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerChat">
     <children>
         <AnchorPane prefHeight="600.0" prefWidth="249.0" style="-fx-background-color: black;">
             <children>
+            <ImageView fitHeight="103.0" fitWidth="199.0" layoutX="23.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/CHAT.png" />
+               </image>
+            </ImageView>
                 <Label layoutX="20.0" layoutY="570.0" text="Copyright © 2024" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
@@ -43,6 +48,11 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
+            <ImageView fitHeight="62.0" fitWidth="32.0" layoutX="11.0" layoutY="11.0" onMouseClicked="#switchToLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/FluentEmojiHighContrastBackArrow.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
         <AnchorPane prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
@@ -65,32 +75,40 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Separator layoutX="2.0" layoutY="65.0" prefHeight="6.0" prefWidth="361.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.1999999999999886" />
+                <Separator layoutX="8.0" layoutY="85.0" prefHeight="6.0" prefWidth="361.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-4.800000000000011" />
 
-                <Label layoutX="14.0" layoutY="80.0" prefHeight="39.0" prefWidth="174.0" text="Seleccionar Contacto" textAlignment="JUSTIFY">
+                <Label layoutX="14.0" layoutY="96.0" prefHeight="39.0" prefWidth="174.0" text="Seleccionar Contacto" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
-                <ComboBox fx:id="contactList" layoutX="179.0" layoutY="80.0" prefWidth="150.0" />
-                <Button layoutX="355.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleSelectContact" text="Seleccionar" />
+                <ComboBox fx:id="contactList" layoutX="178.0" layoutY="105.0" prefWidth="150.0" />
 
-                <Separator layoutX="-1.0" layoutY="120.0" prefHeight="6.0" prefWidth="483.0" />
+                <Separator layoutX="5.0" layoutY="152.0" prefHeight="6.0" prefWidth="483.0" />
 
-                <Label layoutX="14.0" layoutY="140.0" prefHeight="39.0" prefWidth="174.0" text="Historial de Chat" textAlignment="JUSTIFY">
+                <Label layoutX="14.0" layoutY="172.0" prefHeight="39.0" prefWidth="174.0" text="Historial de Chat" textAlignment="JUSTIFY">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextArea fx:id="chatHistory" layoutX="14.0" layoutY="180.0" prefHeight="200.0" prefWidth="480.0" editable="false"/>
+                <TextArea fx:id="chatHistory" editable="false" layoutX="7.0" layoutY="218.0" prefHeight="200.0" prefWidth="480.0" />
 
-                <Label layoutX="14.0" layoutY="390.0" text="Nuevo Mensaje:"/>
-                <TextField fx:id="newMessage" layoutX="14.0" layoutY="410.0" prefWidth="400.0" promptText="Escribe tu mensaje aquí..." />
-                <Button layoutX="420.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Enviar" />
+                <Label layoutX="17.0" layoutY="418.0" text="Nuevo Mensaje:" />
+                <TextField fx:id="newMessage" layoutX="17.0" layoutY="436.0" prefWidth="400.0" promptText="Escribe tu mensaje aquí..." />
+                <Button layoutX="417.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Enviar" />
 
-                <Separator layoutX="0.0" layoutY="450.0" prefHeight="6.0" prefWidth="480.0" />
+                <Separator layoutX="1.0" layoutY="486.0" prefHeight="6.0" prefWidth="480.0" />
 
-                <Button layoutX="420.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleExportConversation" text="Exportar Conversación" />
+                <Button layoutX="348.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleExportConversation" prefHeight="26.0" prefWidth="137.0" text="Exportar Conversación" />
+            <Button layoutX="355.0" layoutY="99.0" mnemonicParsing="false" onAction="#handleSelectContact" prefHeight="30.0" prefWidth="106.0" style="-fx-background-color: black;" text="Seleccionar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="191.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateConversationReport1" prefHeight="26.0" prefWidth="150.0" text="Exportar Resumen" />
             </children>
         </AnchorPane>
     </children>

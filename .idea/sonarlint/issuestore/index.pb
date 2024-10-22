@@ -5,8 +5,6 @@
 0src/main/java/github/alfonsojaen/model/User.java,e\1\e10860450d6666f09e74ced819e3eacfb65f95cd
 c
 3src/main/java/github/alfonsojaen/model/Message.java,e\4\e493073e153b346448cd5bd5c7f4a3d96d074d34
-h
-8src/main/java/github/alfonsojaen/model/Conversation.java,9\5\957ce69ac03bf9eafbd65adc0f802dd09b96c95c
 N
 src/main/java/module-info.java,1\c\1c89a5491fbfda3fb050196d6a239f20200296e7
 e
@@ -28,13 +26,9 @@ a
 a
 1src/main/java/github/alfonsojaen/view/Scenes.java,3\4\348bd1e037eab64d291f53d5bba4b4e76bab8ab2
 n
->src/main/java/github/alfonsojaen/view/SecondaryController.java,5\e\5e4dc918fcb6628be53b92ec51a73c8330c56ba8
-n
 >src/main/java/github/alfonsojaen/view/ControllerUserLogin.java,d\c\dca8885c171895054debfd3ead98211a504ba65b
 a
 1src/main/java/github/alfonsojaen/utils/Utils.java,9\f\9f515f9268ef5b8d92ed1ae1b12c6d74245242a7
-f
-6src/main/java/github/alfonsojaen/utils/XMLManager.java,a\f\af2c945b66a6c72ecb11d4a61a7cfb062fede44a
 k
 ;src/main/java/github/alfonsojaen/singleton/UserSession.java,7\c\7cd77f0aea0bfb97808c34b15b381583151301ed
 `
@@ -49,7 +43,9 @@ f
 messages.xml,f\a\fa033081c8e99c527b1e25383c453356fdc52d54
 f
 6src/main/java/github/alfonsojaen/test/TestContacs.java,7\1\71849b7e28e70d47e6b6dd77b29e6e3b98f7b98d
-o
-?src/main/java/github/alfonsojaen/view/ControllerAddContact.java,3\2\32ce93cfd696a74858f3668dc1679c2942b07447
-q
-Asrc/main/java/github/alfonsojaen/view/ControllerConversation.java,2\1\21ec8579a2703f54d8a3235b37452631064e8235
+@
+conversacion.txt,b\8\b87fd975b6e78c66ada9c0f8a9589e2caea5d361
+i
+9src/main/java/github/alfonsojaen/view/ControllerChat.java,7\9\7909353a49476be3de3f045b15fa5560348dfa06
+H
+informe_conversacion.txt,d\5\d5e3a1dc11a749c0b2ae609a63a0a3fed4bae465

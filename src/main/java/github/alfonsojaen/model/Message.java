@@ -5,10 +5,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "message")
 public class Message {
-    private String sender; // Usuario que envía el mensaje
-    private String recipient; // Usuario que recibe el mensaje
-    private String content; // Contenido del mensaje
-    private String timestamp; // Marca de tiempo
+    private String sender;
+    private String recipient;
+    private String content;
+    private String timestamp;
 
     public Message() {}
 

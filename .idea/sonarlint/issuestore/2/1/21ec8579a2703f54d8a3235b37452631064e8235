@@ -1,7 +1,0 @@
-
-
-java:S1450"[Remove the "loggedInUser" field and declare it as a local variable in the relevant methods.(è–í¼8òº«2J$b7fbe84b-ba7d-4801-af3e-18b4720bf3bb
-¦
-java:S1450"^Remove the "selectedContact" field and declare it as a local variable in the relevant methods.(ò‚¿öøÿÿÿÿ8òº«2J$68d4bc47-c590-47c7-8ec8-e57dbfb9b799
-r	java:S106"+Replace this use of System.out by a logger.(Œ´Ì„ûÿÿÿÿ8ùº«2J$34753458-353c-4365-b227-1ad99cfabe07
-r	java:S106"+Replace this use of System.out by a logger.(üçıÓşÿÿÿÿ8üº«2J$f87c7d3c-4edd-4b52-823e-d74dfcbf9190

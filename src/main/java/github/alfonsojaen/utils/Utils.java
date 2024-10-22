@@ -15,7 +15,7 @@ public class Utils {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA256");
 
-            md.update(s.getBytes()); 	// Se actualiza el MessageDigest con los bytes de la cadena de entrada
+            md.update(s.getBytes());
 
             StringBuilder sb = new StringBuilder();
             for (byte aByte : md.digest()) {
@@ -25,13 +25,13 @@ public class Utils {
         }catch(Exception e){
             e.printStackTrace();
         }
-        return result;  // Se devuelve el resultado del hash en formato hexadecimal
+        return result;
     }
     public static void saveToFile(String filePath, String content) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write(content);
         } catch (IOException e) {
-            e.printStackTrace(); // Manejo de errores
+            e.printStackTrace();
         }
     }
     public static Alert Alert(String title, String header, String text, Alert.AlertType type) {
@@ -40,7 +40,6 @@ public class Utils {
         alertDialog.setHeaderText(header);
         alertDialog.setContentText(text);
 
-        // Mostrar el cuadro de diálogo de manera no bloqueante
         alertDialog.show();
 
         Stage s = (Stage) alertDialog.getDialogPane().getScene().getWindow();

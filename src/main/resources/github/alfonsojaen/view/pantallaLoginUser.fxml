@@ -57,15 +57,15 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Label>
-                <TextField fx:id="tGmail" layoutX="202.0" layoutY="194.0" prefHeight="26.0" prefWidth="232.0" text="alfonsojaen@gmail.com" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="87.60000000000002">
+                <TextField fx:id="tGmail" layoutX="202.0" layoutY="194.0" prefHeight="26.0" prefWidth="232.0" text="alfonsojaen2005@gmail.com" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="87.60000000000002">
                <effect>
                   <DropShadow />
                </effect></TextField>
-                <PasswordField fx:id="tPass" layoutX="204.0" layoutY="258.0" prefHeight="26.0" prefWidth="231.0" text="alfonso2005" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="86.39999999999998">
+                <PasswordField fx:id="tPass" layoutX="204.0" layoutY="258.0" prefHeight="26.0" prefWidth="231.0" text="jaen2005" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="86.39999999999998">
                <effect>
                   <DropShadow />
                </effect></PasswordField>
-                <Label alignment="CENTER" layoutX="82.0" layoutY="118.0" prefHeight="39.0" prefWidth="197.0" text="LASCUADRILLAS LOGIN" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="81.19999999999999">
+                <Label alignment="CENTER" layoutX="82.0" layoutY="118.0" prefHeight="39.0" prefWidth="197.0" text="CHAT LOGIN" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="81.19999999999999">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
@@ -90,6 +90,11 @@
                         <Font size="16.0" />
                     </font>
                 </Hyperlink>
+            <ImageView fitHeight="99.0" fitWidth="152.0" layoutX="201.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/CHAT.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </children>

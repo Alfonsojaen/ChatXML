@@ -10,12 +10,17 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class ControllerAddContact {
+public class ControllerChat {
     @FXML
     private TextField tEmail;
     @FXML
@@ -30,14 +35,17 @@ public class ControllerAddContact {
     private User selectedContact;
     private MessageManager messageManager;
 
-    public ControllerAddContact() {
+    public ControllerChat() {
         this.messageManager = new MessageManager();
     }
 
     public void setUser(User user) {
         this.loggedInUser = user;
-        System.out.println("Logged in user: " + loggedInUser.getGmail());
         loadContacts();
+    }
+    @FXML
+    private void switchToLogin() throws IOException {
+        Scenes.setRoot("pantallaLoginUser", null);
     }
     @FXML
     private void handleSelectContact() {
@@ -142,4 +150,48 @@ public class ControllerAddContact {
         Utils.saveToFile("conversacion.txt", sb.toString());
         Utils.ShowAlert("Conversación exportada a conversacion.txt");
     }
+    @FXML
+    private void generateConversationReport1() {
+        generateConversationReport(messageManager.getMessages());
+    }
+    private void generateConversationReport(List<Message> conversation) {
+        long totalMessages = conversation.size();
+
+        Map<String, Long> messagesPerUser = conversation.stream()
+                .collect(Collectors.groupingBy(Message::getSender, Collectors.counting()));
+
+        IntSummaryStatistics messageLengthStats = conversation.stream()
+                .mapToInt(msg -> msg.getContent().split("\\s+").length)
+                .summaryStatistics();
+
+        Map<String, Long> wordFrequency = conversation.stream()
+                .flatMap(msg -> Arrays.stream(msg.getContent().toLowerCase().split("\\s+")))
+                .filter(word -> word.length() > 3)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        List<Map.Entry<String, Long>> mostCommonWords = wordFrequency.entrySet().stream()
+                .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+                .limit(10)
+                .collect(Collectors.toList());
+
+        StringBuilder report = new StringBuilder();
+        report.append("Informe de la conversación entre ").append(loggedInUser.getGmail()).append(" y ").append(selectedContact.getGmail()).append("\n");
+        report.append("--------------------------------------------------\n");
+        report.append("Número total de mensajes: ").append(totalMessages).append("\n\n");
+
+        report.append("Mensajes enviados por cada usuario:\n");
+        messagesPerUser.forEach((user, count) -> report.append(user).append(": ").append(count).append(" mensajes\n"));
+
+        report.append("\nEstadísticas de longitud de mensajes:\n");
+        report.append("Mensaje más corto (en palabras): ").append(messageLengthStats.getMin()).append("\n");
+        report.append("Mensaje más largo (en palabras): ").append(messageLengthStats.getMax()).append("\n");
+        report.append("Promedio de longitud de mensajes: ").append(messageLengthStats.getAverage()).append("\n\n");
+
+        report.append("Palabras más comunes:\n");
+        mostCommonWords.forEach(entry -> report.append(entry.getKey()).append(": ").append(entry.getValue()).append(" veces\n"));
+
+        Utils.saveToFile("informe_conversacion.txt", report.toString());
+        Utils.ShowAlert("Informe generado y guardado como informe_conversacion.txt");
+    }
+
 }

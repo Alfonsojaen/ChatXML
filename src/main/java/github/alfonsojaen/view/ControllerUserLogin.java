@@ -31,7 +31,7 @@ public class ControllerUserLogin {
             if (loggedInUser != null) {
                 UserSession.login(gmail, password);
                 Utils.ShowAlert("Login exitoso, se ha logeado el usuario correctamente.");
-                Scenes.setRoot("pantallaAddContact",loggedInUser);
+                Scenes.setRoot("pantallaChat",loggedInUser);
             } else {
                 UserSession.logout();
                 Utils.ShowAlert("No se ha podido logear, inténtelo de nuevo.");

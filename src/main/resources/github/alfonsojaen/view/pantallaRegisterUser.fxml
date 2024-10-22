@@ -62,7 +62,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></TextField>
-            <Label alignment="CENTER" layoutX="146.0" layoutY="14.0" prefHeight="39.0" prefWidth="255.0" text="REGISTRACIÓN">
+            <Label alignment="CENTER" layoutX="146.0" layoutY="14.0" prefHeight="39.0" prefWidth="255.0" text="REGISTRARSE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
