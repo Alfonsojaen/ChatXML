@@ -84,4 +84,22 @@
         <sender>alfonsoj@gmail.com</sender>
         <timestamp>2024-10-22 16:10:03</timestamp>
     </message>
+    <message>
+        <content>holaaa</content>
+        <recipient>user3@gmail.com</recipient>
+        <sender>alfonsojaen2005@gmail.com</sender>
+        <timestamp>2024-10-23 10:34:04</timestamp>
+    </message>
+    <message>
+        <content>adios</content>
+        <recipient>user3@gmail.com</recipient>
+        <sender>alfonsojaen2005@gmail.com</sender>
+        <timestamp>2024-10-23 10:34:20</timestamp>
+    </message>
+    <message>
+        <content>adios</content>
+        <recipient>user3@gmail.com</recipient>
+        <sender>alfonsojaen2005@gmail.com</sender>
+        <timestamp>2024-10-23 10:46:35</timestamp>
+    </message>
 </messages>
