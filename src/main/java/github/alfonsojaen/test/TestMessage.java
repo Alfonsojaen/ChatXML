@@ -9,28 +9,22 @@ import java.util.List;
 
 public class TestMessage {
     public static void main(String[] args) {
-        // Crear un administrador de usuarios
         UserManager userManager = new UserManager();
 
-        // Crear usuarios
         User user1 = new User("usuario1", "contraseña1", "user1@gmail.com", "Usuario Uno", 25);
         User user2 = new User("usuario2", "contraseña2", "user2@gmail.com", "Usuario Dos", 30);
         User user3 = new User("usuario3", "contraseña3", "user3@gmail.com", "Usuario Tres", 28);
 
-        // Agregar usuarios
         userManager.addUser(user1);
         userManager.addUser(user2);
         userManager.addUser(user3);
 
-        // Enviar mensajes
         MessageManager messageManager = new MessageManager();
 
-        // Simular el envío de mensajes
         sendMessage(messageManager, user1.getGmail(), user2.getGmail(), "Hola, Usuario Dos!");
         sendMessage(messageManager, user2.getGmail(), user1.getGmail(), "Hola, Usuario Uno! ¿Cómo estás?");
         sendMessage(messageManager, user1.getGmail(), user3.getGmail(), "¡Hola, Usuario Tres! ¿Te gustaría salir hoy?");
 
-        // Mostrar todas las conversaciones
         List<Message> messages = messageManager.getMessages();
         for (Message message : messages) {
             System.out.println("De: " + message.getSender());
@@ -42,7 +36,7 @@ public class TestMessage {
     }
 
     private static void sendMessage(MessageManager messageManager, String sender, String recipient, String content) {
-        String timestamp = String.valueOf(System.currentTimeMillis()); // Generar timestamp simple
+        String timestamp = String.valueOf(System.currentTimeMillis());
         Message message = new Message(sender, recipient, content, timestamp);
         messageManager.sendMessage(message);
         System.out.println("Mensaje enviado de " + sender + " a " + recipient + ": " + content);

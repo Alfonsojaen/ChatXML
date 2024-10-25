@@ -61,7 +61,7 @@
                <effect>
                   <DropShadow />
                </effect></TextField>
-                <PasswordField fx:id="tPass" layoutX="204.0" layoutY="258.0" prefHeight="26.0" prefWidth="231.0" text="jaen2005" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="86.39999999999998">
+                <PasswordField fx:id="tPass" layoutX="204.0" layoutY="258.0" prefHeight="26.0" prefWidth="231.0" text="alfon2005" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="86.39999999999998">
                <effect>
                   <DropShadow />
                </effect></PasswordField>

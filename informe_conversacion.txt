@@ -1,21 +1,16 @@
-Informe de la conversación entre alfonsojaen2005@gmail.com y alfonsoj@gmail.com
+Informe de la conversación entre alfonsojaen2005@gmail.com y juanje@gmail.com
 --------------------------------------------------
-Número total de mensajes: 5
+Número total de mensajes: 2
 
 Mensajes enviados por cada usuario:
-alfonsojaen2005@gmail.com: 4 mensajes
-alfonsoj@gmail.com: 1 mensajes
+alfonsojaen2005@gmail.com: 2 mensajes
+juanje@gmail.com: 0 mensajes
 
 Estadísticas de longitud de mensajes:
 Mensaje más corto (en palabras): 1
-Mensaje más largo (en palabras): 4
-Promedio de longitud de mensajes: 2.4
+Mensaje más largo (en palabras): 1
+Promedio de longitud de mensajes: 1,00
 
 Palabras más comunes:
-pasa: 2 veces
-dsdd: 1 veces
-como: 1 veces
-dime: 1 veces
-eiiii: 1 veces
-estas: 1 veces
-algo: 1 veces
+hxfhgh: 1 veces
+555555555555555: 1 veces

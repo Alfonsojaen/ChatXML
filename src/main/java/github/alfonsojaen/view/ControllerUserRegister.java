@@ -9,22 +9,39 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+/**
+ * Clase ControllerUserRegister que gestiona el registro de nuevos usuarios.
+ * Permite recoger información del usuario y validar antes de crear una nueva cuenta.
+ * @author Alfonso Jaen
+ */
 public class ControllerUserRegister {
+
+    /** Campo de texto para introducir el nombre completo del usuario. */
     @FXML
     private TextField tFullName;
 
+    /** Campo de texto para introducir el correo electrónico del usuario. */
     @FXML
     private TextField tGmail;
 
+    /** Campo de texto para introducir el nombre de usuario. */
     @FXML
     private TextField tUsername;
 
+    /** Campo de texto para introducir la contraseña del usuario. */
     @FXML
     private PasswordField tPass;
 
+    /** Campo de texto para introducir la edad del usuario. */
     @FXML
     private TextField tAge;
 
+    /**
+     * Método que maneja el proceso de registro de un nuevo usuario.
+     * Valida la información ingresada y crea una nueva cuenta si es válida.
+     *
+     * @throws IOException Excepción lanzada si hay un error al cambiar de pantalla.
+     */
     @FXML
     private void register() throws IOException {
         String fullName = tFullName.getText().trim();
@@ -32,7 +49,6 @@ public class ControllerUserRegister {
         String username = tUsername.getText().trim();
         String password = tPass.getText().trim();
         String ageStr = tAge.getText().trim();
-
 
         if (fullName.isEmpty() || gmail.isEmpty() || username.isEmpty() || password.isEmpty() || ageStr.isEmpty()) {
             Utils.ShowAlert("Falta algún campo por introducir");
@@ -50,8 +66,10 @@ public class ControllerUserRegister {
             Utils.ShowAlert("La edad debe ser un número válido");
             return;
         }
+
         UserManager userManager = new UserManager();
         boolean emailExists = false;
+
         for (User existingUser : userManager.getUsers()) {
             if (existingUser.getGmail() != null && existingUser.getGmail().equals(gmail)) {
                 emailExists = true;
@@ -74,6 +92,11 @@ public class ControllerUserRegister {
         }
     }
 
+    /**
+     * Método que cambia la vista a la página de inicio de sesión de usuario.
+     *
+     * @throws IOException Excepción lanzada si hay un error al cambiar de pantalla.
+     */
     @FXML
     private void switchToLoginPage() throws IOException {
         Scenes.setRoot("pantallaLoginUser", null);

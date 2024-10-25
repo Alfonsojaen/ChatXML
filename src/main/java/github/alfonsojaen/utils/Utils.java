@@ -2,31 +2,26 @@ package github.alfonsojaen.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Region;
-import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.security.MessageDigest;
 
+/**
+ * Clase Utils que proporciona métodos utilitarios para la aplicación.
+ * Incluye métodos para guardar contenido en un archivo y para mostrar alertas informativas.
+ *
+ * Author: Alfonso Jaen
+ */
 public class Utils {
-    public static String encryptSHA256 (String s){
-        String result = null;
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA256");
 
-            md.update(s.getBytes());
-
-            StringBuilder sb = new StringBuilder();
-            for (byte aByte : md.digest()) {
-                sb.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
-            }
-            result = sb.toString();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        return result;
-    }
+    /**
+     * Método estático que guarda contenido en un archivo especificado.
+     * Utiliza un BufferedWriter para escribir el contenido en el archivo de forma eficiente.
+     *
+     * @param filePath Ruta del archivo donde se guardará el contenido.
+     * @param content Contenido que se guardará en el archivo.
+     */
     public static void saveToFile(String filePath, String content) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             writer.write(content);
@@ -34,21 +29,13 @@ public class Utils {
             e.printStackTrace();
         }
     }
-    public static Alert Alert(String title, String header, String text, Alert.AlertType type) {
-        Alert alertDialog = new Alert(type);
-        alertDialog.setTitle(title);
-        alertDialog.setHeaderText(header);
-        alertDialog.setContentText(text);
 
-        alertDialog.show();
-
-        Stage s = (Stage) alertDialog.getDialogPane().getScene().getWindow();
-        s.toFront();
-
-        return alertDialog;
-    }
-
-
+    /**
+     * Método estático que muestra una alerta informativa con el mensaje especificado.
+     * Utiliza la clase Alert para generar una ventana emergente con el mensaje.
+     *
+     * @param message Mensaje que se mostrará en la alerta.
+     */
     public static void ShowAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Información");
